@@ -32,3 +32,9 @@ for (let i = 1; i < MAX_NUMBER; i++) {
   }
   currentMatches = 1;
 }
+
+/* 
+Task link: https://projecteuler.net/problem=52
+Answer:    142857
+Time out:  0,59s user 0,02s system 104% cpu 0,584 total
+*/

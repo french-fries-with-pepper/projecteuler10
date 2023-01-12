@@ -29,7 +29,7 @@ const solution = (n) => {
   for (let i = 0; i < hArr.length; i++) {
     if (bs(tArr, hArr[i]) && bs(pArr, hArr[i])) {
       console.log(hArr[i]);
-      console.log(i);
+      //console.log(i);
     }
   }
 };
@@ -39,3 +39,9 @@ solution(55101);
 
 //50000000 can reach next such number
 //solution(50000000);
+
+/* 
+Task link: https://projecteuler.net/problem=45
+Answer:    1533776805
+Time out:  0,14s user 0,02s system 102% cpu 0,156 total
+*/

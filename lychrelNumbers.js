@@ -19,12 +19,17 @@ const solution = () => {
       }
     }
     if (!isPalindromeStr(`${current}`)) {
-      console.log(`number is ${i}, reduce to ${current}`);
+      //console.log(`number is ${i}, reduce to ${current}`);
       count++;
     }
   }
-
   return count;
 };
 
 console.log(solution());
+
+/* 
+Task link: https://projecteuler.net/problem=55
+Answer:    249
+Time out:  0,13s user 0,02s system 103% cpu 0,150 total
+*/

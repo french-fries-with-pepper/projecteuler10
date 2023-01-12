@@ -1,8 +1,10 @@
 const fs = require("fs");
 
+// generate triangle numbers to N
 const genTriangles = (n) =>
   Array.from({ length: n }, (_, i) => (i * (i + 1)) / 2);
 
+//binary search, can be moved in seporate module.
 let bs = function (sorted_arr, target) {
   let start = 0,
     end = sorted_arr.length - 1;
@@ -30,3 +32,9 @@ const solution = () => {
 };
 
 console.log(solution());
+
+/* 
+Task link: https://projecteuler.net/problem=42  
+Answer:    162
+Time out:  0,08s user 0,02s system 103% cpu 0,095 total
+*/

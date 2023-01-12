@@ -1,4 +1,5 @@
 const solution = (n) => {
+  //binary search, can be moved in seporate module.
   let bs = function (sorted_arr, target) {
     let start = 0,
       end = sorted_arr.length - 1;
@@ -10,6 +11,7 @@ const solution = (n) => {
     }
     return false;
   };
+  // function to generate all primes from 2 to N
   const getAllPrimesToN = (n) => {
     const arr = new Array(n).fill(true);
     for (let i = 2; i ** 2 <= n; i++) {
@@ -51,3 +53,9 @@ const solution = (n) => {
 };
 
 solution(1000000);
+
+/* 
+Task link: https://projecteuler.net/problem=35  
+Answer:    55
+Time out:  0,29s user 0,02s system 103% cpu 0,297 total
+*/

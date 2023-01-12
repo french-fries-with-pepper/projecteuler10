@@ -15,4 +15,8 @@ data
   });
 console.log(result);
 
-// answer is 871198282
+/* 
+Task link: https://projecteuler.net/problem=22
+Answer:    871198282
+Time out:  0,09s user 0,03s system 109% cpu 0,105 total
+*/

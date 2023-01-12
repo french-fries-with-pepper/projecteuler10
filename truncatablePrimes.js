@@ -1,5 +1,6 @@
 const solution = () => {
   const MAX = 1000000;
+  // binary search
   let bs = function (sorted_arr, target) {
     let start = 0,
       end = sorted_arr.length - 1;
@@ -11,6 +12,7 @@ const solution = () => {
     }
     return false;
   };
+  // generate array of primes to N
   const getAllPrimesToN = (n) => {
     const arr = new Array(n).fill(true);
     for (let i = 2; i ** 2 <= n; i++) {
@@ -29,6 +31,8 @@ const solution = () => {
     return res.slice(2);
   };
   const primes = getAllPrimesToN(MAX);
+
+  // check and save all prime number, that can be truncable left
   const truncLeft = [];
   for (let i = 4; i < primes.length; i++) {
     let el = primes[i];
@@ -41,10 +45,11 @@ const solution = () => {
       }
     }
     if (isTruncable) {
-      //console.log(primes[i]);
       truncLeft.push(primes[i]);
     }
   }
+
+  // find in left-truncable numbers right-truncable
   const truncRight = [];
   for (let i = 0; i < truncLeft.length; i++) {
     let el = truncLeft[i];
@@ -61,9 +66,14 @@ const solution = () => {
       truncRight.push(truncLeft[i]);
     }
   }
+  console.log("answer is");
   return truncRight.reduce((acc, el) => acc + el, 0);
 };
 
 console.log(solution());
 
-//answer is 748317
+/* 
+Task link: https://projecteuler.net/problem=37
+Answer:    748317
+Time out:  0,22s user 0,04s system 102% cpu 0,251 total
+*/
